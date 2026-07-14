@@ -1,4 +1,6 @@
 // app/page.js
+"use client"; // ئەڤ دێرە گەلەک یا گرنگە بۆ چەسەکرنا ئەورۆری!
+
 import Link from 'next/link';
 
 export default function HomePage() {
