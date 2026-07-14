@@ -1,48 +1,53 @@
 // app/page.js
-"use client"; // ئەڤ دێرە گەلەک یا گرنگە بۆ چەسەکرنا ئەورۆری!
+"use client";
 
 import Link from 'next/link';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col justify-between items-center py-16 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white">
+    <div className="min-h-screen flex flex-col justify-between items-center py-12 px-6 bg-slate-950 text-white font-sans" style={{ direction: 'rtl' }}>
       
-      {/* پشکا سەرەکی (Hero Section) */}
-      <div className="flex flex-col items-center text-center max-w-2xl my-auto space-y-6 animate-fade-in">
-        <div className="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-1.5 rounded-full text-sm font-medium tracking-wide">
+      {/* پشکا سەرەکی */}
+      <div className="flex flex-col items-center text-center max-w-xl my-auto w-full animate-fade-in" style={{ gap: '2rem' }}>
+        
+        {/* باجێ سەرەکی */}
+        <div className="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-1.5 rounded-full text-xs font-semibold">
           ✨ پلاتفۆرمی دروستکردنی بایۆلینک بە ئاسانی
         </div>
         
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+        {/* مانشێتێ سەرەکی */}
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-snug">
           هەمی ئەکاونت و بەرهەمێن خۆ <br />
           <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
             ب جوانترین شێواز
           </span> نیشان بدە
         </h1>
         
-        <p className="text-lg text-slate-300 max-w-lg leading-relaxed">
+        {/* تێکستێ ڕوونکردنەوەیێ */}
+        <p className="text-sm md:text-base text-slate-400 max-w-md leading-relaxed">
           ئەکاونتێن سۆشیاڵ میدیا دگەل جوانترین بەکڕاوند و دیزاین ل سەر لۆکەیشنەکێ تایبەت چێکە و ب ڕێکا ژمارەیەکێ ئەکاونتێ خۆ کۆنترۆڵ بکە.
         </p>
 
-        {/* دوگمەیێن سەرەکی */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center pt-4">
+        {/* دوگمەیێن سەرەکی - ب شێوازەکێ مسۆگەر یێ جودا بۆ موبایلێ */}
+        <div className="w-full max-w-xs flex flex-col gap-4 pt-4">
           <Link 
             href="/zaniyar"
-            className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-semibold shadow-lg shadow-indigo-600/30 transition duration-300 transform hover:-translate-y-0.5 text-center"
+            className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-bold text-center text-sm md:text-base transition duration-300 shadow-lg shadow-indigo-600/20 block"
           >
             بینینی لاپەڕەی زانیار (نموونە)
           </Link>
-          <button 
-            onClick={() => alert("ئەڤ بەشە د داهاتوودا دگەل داتابەیسێ چالاک دەبێت!")}
-            className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl font-semibold transition duration-300 text-center"
+          
+          <Link 
+            href="/register"
+            className="w-full py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl font-bold text-center text-sm md:text-base transition duration-300 block"
           >
             تۆماربوونا ئەکاونتەکێ نوو
-          </button>
+          </Link>
         </div>
       </div>
 
       {/* بنپەڕ (Footer) */}
-      <footer className="text-sm text-slate-500 pt-8 border-t border-slate-800/60 w-full text-center">
+      <footer className="text-xs text-slate-600 pt-8 border-t border-slate-900 w-full text-center">
         © {new Date().getFullYear()} My Biolink. هەمی ماف د پارێزراون.
       </footer>
     </div>
